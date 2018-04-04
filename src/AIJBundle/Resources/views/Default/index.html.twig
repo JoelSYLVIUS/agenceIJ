@@ -1,0 +1,44 @@
+{% extends  '::base.html.twig' %}
+
+{% block title %}Bienvenue sur AIJ !{% endblock %}
+
+{% block stylesheets %}
+<style>
+h1, p{
+        margin-top: 150px;
+}
+h1{
+        font-size: 100px;
+        text-shadow: 2px 2px  1px #ffffff;
+}
+p{
+        font-size: 30px;
+        text-shadow: 2px 2px  1px #ffffff;
+}
+.parallax-container {
+      height: 80vh;
+    }
+</style>
+{% endblock %}
+{% block body %}
+
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ asset('medias/snow-leopard.jpg') }}"></div>
+      <div class="container center">
+              <h1>{{titre}}</h1>
+              <p> {{ slogan}} </p>
+      </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script>
+$(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
+    </script>
+
+{% endblock %}
